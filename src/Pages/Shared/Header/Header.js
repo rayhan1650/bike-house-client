@@ -26,8 +26,8 @@ const Header = () => {
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link as={Link} to="/about">
-                About
+              <Nav.Link as={Link} to="/login">
+                Login
               </Nav.Link>
               {/* toggle login and sign out  */}
               {/* {user ? (

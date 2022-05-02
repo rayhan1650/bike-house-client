@@ -1,11 +1,26 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import Loading from "../../Shared/Loading/Loading";
 
 const SignUp = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const confirmPasswordRef = useRef("");
+
+  const [passwordError, setPasswordError] = useState("");
+  const [createUserWithEmailAndPassword, user, loading] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const navigate = useNavigate();
+
+  if (loading) {
+    return <Loading />;
+  }
+  if (user) {
+    navigate("/");
+  }
 
   const handleSignUp = (event) => {
     event.preventDefault();
@@ -14,13 +29,13 @@ const SignUp = () => {
     const confirmPassword = confirmPasswordRef.current.value;
 
     // confirmPassword varification
-    // if (password !== confirmPassword) {
-    //   setPasswordError("Password didn't match");
-    //   return;
-    // } else {
-    //   setPasswordError("");
-    //   createUserWithEmailAndPassword(email, password);
-    // }
+    if (password !== confirmPassword) {
+      setPasswordError("Password didn't match");
+      return;
+    } else {
+      setPasswordError("");
+      createUserWithEmailAndPassword(email, password);
+    }
   };
   return (
     <div className="my-login mx-auto">
@@ -53,7 +68,7 @@ const SignUp = () => {
             placeholder="Confirm Password"
             required
           />
-          {/* <p className="text-danger">{passwordError}</p> */}
+          <p className="text-danger">{passwordError}</p>
         </Form.Group>
 
         <Button variant="primary" type="submit">

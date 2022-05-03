@@ -8,6 +8,7 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -92,6 +93,8 @@ const Login = () => {
           Reset password
         </button>{" "}
       </p>
+
+      <SocialLogin />
     </div>
   );
 };

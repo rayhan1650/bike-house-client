@@ -1,0 +1,56 @@
+[
+  {
+    "_id": 1,
+    "price": 900,
+    "img": "https://i.ibb.co/Nxf9mHg/honda-dream-yuga-1.jpg",
+    "name": "Honda Dream Yuga",
+    "quantity": 85,
+    "description": "Honda has launched the Dream Yuga with CBS (Combined Braking System), priced at Rs 54,807 (ex-showroom, Delhi). That's a premium of Rs 560 over the non-CBS variant. Apart from this, the bike remains unchanged. It gets sporty graphics, body-coloured rear view mirrors, rolling resistance tyres and a new color scheme - black with Sunset brown. In terms of design, the Dream Yuga is virtually identical to its elder sibling, the Honda Shine. It features a no-nonsense design with a basic headlight, clear lens indicators, angular tail light, body-coloured grab rail, and an analogue instrument console featuring two round pods. There are no changes on the mechanical front and the 2018 Dream Yuga continues to draw power from a 109.19cc, 4-stroke, air-cooled, BSIV-compliant engine that churns out max power of 8.40PS @ 7500rpm and a peak torque of 8.63Nm @ 5500rpm, mated to a 4-speed gearbox. The latest Dream Yuga is said to be more fuel efficient owing to the Honda Eco Technology (HET) tyres. It is claimed to return a mileage of 72kmpl and has a fuel tank capacity of 8 litres. Braking is handled by 130mm drum brakes at both ends which are attached to 18-inch alloy wheels. Suspension setup includes telescopic forks at the front and a hydraulic shock absorber at the rear.",
+    "supplier": "Nolan"
+  },
+  {
+    "_id": 2,
+    "price": 2600,
+    "img": "https://i.ibb.co/1dwmKSX/Yamaha-YZF-R1-M.jpg",
+    "name": "Yamaha YZF-R1M",
+    "quantity": 25,
+    "description": "The YZF-R1M features a cableless ride-by-wire Yamaha Chip Controlled Throttle (YCC-T®) system that transforms the rider's inputs into motion, with a full suite of IMU-powered electronic rider aids that bring new meaning to the term 'rider confidence'. It comes standard with an integrated Communications Control Unit (CCU) data-logging and GPS system that puts factory superbike technology in the palm of your hand, complete with GPS-powered course mapping, automatic lap timing and Yamaha Ride Control (YRC) mobile device adjustability. The YZF-R1M features beautifully integrated bodywork and sleek, stylish lines which create an unmistakably aggressive, aerodynamic profile. R1M riders are treated to even higher levels of fit and finish thanks to full carbon-fiber bodywork, including a carbon windscreen fairing, side fairings, front fender and tail section, matched to a polished aluminum swingarm and topped with a unique serial-numbered YZF-R1M badge on top of the airbox cover. A new-for-2022 styling update further accentuates the premium carbon fiber bodywork and stunning aluminum fuel tank.",
+    "supplier": "Collins"
+  },
+  {
+    "_id": 3,
+    "price": 1350,
+    "img": "https://i.ibb.co/kyynHxv/suzuki-katana-1000.jpg",
+    "name": "Suzuki Katana",
+    "quantity": 14,
+    "description": "The KATANA's iconic style lives in a new sportbike with modern style, stellar engine performance, nimble handling, and great ergonomics. Using a design similar to the GSX-R1000R, the KATANA's Suzuki Clutch Assist System (SCAS) drive line smooths shifting and engine braking. Twin-spar aluminum frame and fully adjustable KYB-supplied suspension deliver controlled handling. Fuel-injected, 999cc, GSX-R-based engine features a throttle control mechanism that smooths the power delivery for a stimulating sportbike experience. Suzuki Advanced Traction Control lets the rider select sensitivity on the fly so engine power to the rear wheel matches road conditions. Dual floating front brake rotors and Brembo Monobloc brake calipers, plus an Anti-lock Brake System (ABS), deliver controlled stopping power. Recent refinements, such as new front brake hoses, yield improved stopping performance with better feel at the lever.",
+    "supplier": "Meyer"
+  },
+  {
+    "_id": 4,
+    "price": 3118,
+    "img": "https://i.ibb.co/MZRwWY2/kawasaki-ninja-250.jpg",
+    "name": "Kawasaki Ninja 250",
+    "quantity": 72,
+    "description": " Kawasaki Ninja 250 was recently revealed internationally at Tokyo Motor Show. The updated motorcycle is exactly based on Ninja 400 and just uses a smaller power-plant under its fairing. The 249cc, twin cylinder engine on Ninja 250 is good for 39 HP at 12,500 rpm and 23.5 Nm at 10,000 rpm. The values make it almost similar in power when compared to Honda CBR250RR. Kawasaki may enter local production for products like Ninja 250, Z250, Ninja 400, Z650 and Ninja 650.",
+    "supplier": "Abbott"
+  },
+  {
+    "_id": 5,
+    "price": 2000,
+    "img": "https://i.ibb.co/KzhxZSJ/Hero-hunk-150-R.jpg",
+    "name": "HERO HUNK 150R",
+    "quantity": 97,
+    "description": "Hero Hunk is the top product of Hero Moto Corp which is also the most sporty look holder standard bike specially made for young generations. Hero is one of the most popular brands in Bangladesh and India both. Equipped with superior ride and handling, aimed at providing real-world performance the All-new Hero Hunk 150R is simply the best thing you can get. It is a great quality commuter sports bike. The Hero Hunk 150R is an exciting mix of bold new style and zippy performance. The new Hunk 150R is equipped with a lightweight diamond tubular frame that gives precise handling and stability makes corners turn easy and smooth. The 150R offers first-class features with a new alloy wheel design, ABS and instant power stopping in all types of riding conditions. If you would like to buy it for better engine power and most reliable brand.",
+    "supplier": "Hooper"
+  },
+  {
+    "_id": 6,
+    "price": 2524,
+    "img": "https://i.ibb.co/w7PfQt8/TVS-Apache-RTR-160-4-V-DD.jpg",
+    "name": "TVS Apache RTR 160 4V DD",
+    "quantity": 98,
+    "description": "TVS Apache RTR 160 4V DD Bike Price in BD 2022. Which Engine Type is Single Cylinder, Spark Ignition, 4 stroke, Oil cooled. This bike is powered by the 159.70 ccEngine. TVS Apache RTR 160 4V DD Generates Maximum Power 16.5 HP @ 8000 rpm. It's Maximum Torque is 14.8 NM @ 6500 rpm. Transmission duties are taken care of by a 5 Speed Gearbox. TVS claims that the bike offers a mileage of 42.00 Kmpl (approx). TVS Apache RTR 160 4V DD Front Suspension is Telescopic Forks and Rear Suspension is Monoshock.",
+    "supplier": "Nunez"
+  }
+]

@@ -29,8 +29,6 @@ const Header = () => {
               <Nav.Link as={Link} to="/blogs">
                 Blogs
               </Nav.Link>
-            </Nav>
-            <Nav>
               {user && (
                 <>
                   <Nav.Link as={Link} to="/manageinventories">
@@ -44,6 +42,8 @@ const Header = () => {
                   </Nav.Link>
                 </>
               )}
+            </Nav>
+            <Nav>
               {/* toggle login and sign out  */}
               {user ? (
                 <Nav.Link onClick={() => signOut(auth)} as={Link} to="/login">

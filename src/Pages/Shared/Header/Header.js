@@ -13,10 +13,11 @@ const Header = () => {
         collapseOnSelect
         expand="lg"
         className="my-header"
-        variant="light"
+        bg="primary"
+        variant="dark"
       >
         <Container>
-          <Navbar.Brand as={Link} className="text-danger fw-bold" to="/">
+          <Navbar.Brand as={Link} className="text-dark fw-bold" to="/">
             BIKE HOUSE
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

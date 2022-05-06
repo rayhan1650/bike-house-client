@@ -68,7 +68,7 @@ const Login = () => {
       {/* signin error  */}
       {error ? <p className="text-danger">Error: {error.message}</p> : <p></p>}
       <p className="mt-2 my-link">
-        New to Tech Tutor? <Link to="/signup">Please SignUp.</Link>{" "}
+        New to Bike House? <Link to="/signup">Please SignUp.</Link>{" "}
       </p>
 
       {/* reset password error show */}
@@ -90,7 +90,7 @@ const Login = () => {
           }}
           className="border-0 text-primary bg-transparent"
         >
-          Reset password
+          Reset password.
         </button>{" "}
       </p>
 

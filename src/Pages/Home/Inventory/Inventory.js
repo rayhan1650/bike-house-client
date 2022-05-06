@@ -22,7 +22,7 @@ const Inventory = ({ inventory }) => {
           </p>
 
           <Link className="mt-auto" to="/checkout">
-            <button className="btn btn-primary ">Buy Now</button>
+            <button className="btn btn-primary ">Stock Update</button>
           </Link>
         </div>
       </div>

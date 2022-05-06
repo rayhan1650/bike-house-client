@@ -11,6 +11,7 @@ import MyItems from "./Pages/MyItems/MyItems";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
+import StockUpdate from "./Pages/StockUpdate/StockUpdate";
 
 function App() {
   return (
@@ -43,6 +44,14 @@ function App() {
           element={
             <RequireAuth>
               <MyItems />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/inventory/:id"
+          element={
+            <RequireAuth>
+              <StockUpdate />
             </RequireAuth>
           }
         />

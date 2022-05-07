@@ -1,0 +1,9 @@
+.my-stockupdate {
+  min-height: 78vh;
+}
+
+@media only screen and (max-width: 576px) {
+  .my-margin {
+    margin-top: 10px;
+  }
+}

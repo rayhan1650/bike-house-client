@@ -9,6 +9,23 @@ const ManageInventories = () => {
   if (!inventories.length) {
     return <Loading />;
   }
+
+  const handleItemDelete = (id) => {
+    const proceed = window.confirm("Are you sure you want to delete?");
+    if (proceed) {
+      console.log("delete", id);
+      const url = `http://localhost:5000/inventory/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            console.log("Delete successful.");
+          }
+        });
+    }
+  };
   return (
     <div className="container">
       <h2 className="text-center text-primary mt-5">Manage Inventories</h2>
@@ -36,6 +53,7 @@ const ManageInventories = () => {
                 <td>{inventory.quantity}</td>
                 <td>
                   <button
+                    onClick={() => handleItemDelete(inventory._id)}
                     title="Click here to delete this item."
                     className="border-0 rounded-circle btn btn-outline-light"
                   >

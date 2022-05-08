@@ -6,7 +6,12 @@ import "./AddItem.css";
 
 const AddItem = () => {
   const [user] = useAuthState(auth);
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm();
   const onSubmit = (data) => {
     const url = `http://localhost:5000/inventories`;
     fetch(url, {
@@ -18,7 +23,8 @@ const AddItem = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+        reset();
+        alert("Item added successfully.");
       });
   };
   return (
@@ -33,25 +39,42 @@ const AddItem = () => {
           placeholder="Name"
           {...register("name", { required: true })}
         />
-        <input value={user.email} type="email" {...register("email")} />
+        {errors.name?.type === "required" && "Name is required"}
+        <input
+          value={user.email}
+          type="email"
+          {...register("email", { required: true })}
+        />
         <input
           className="my-2"
           placeholder="ImageURL"
           {...register("img", { required: true })}
         />
-        <input placeholder="Price" type="number" {...register("price")} />
+        {errors.img?.type === "required" && "ImageUrl is required"}
+        <input
+          placeholder="Price"
+          type="number"
+          {...register("price", { required: true })}
+        />
+        {errors.price?.type === "required" && "Price is required"}
         <input
           className="my-2"
           placeholder="Quantity"
           type="number"
-          {...register("quantity")}
+          {...register("quantity", { required: true })}
         />
-        <input placeholder="Supplier" {...register("supplier")} />
+        {errors.quantity?.type === "required" && "Quantity is required"}
+        <input
+          placeholder="Supplier"
+          {...register("supplier", { required: true })}
+        />
+        {errors.supplier?.type === "required" && "Supplier is required"}
         <textarea
           className="my-2"
           placeholder="Description"
-          {...register("description")}
+          {...register("description", { required: true })}
         />
+        {errors.description?.type === "required" && "Description is required"}
         <input
           className="btn btn-outline-primary"
           type="submit"

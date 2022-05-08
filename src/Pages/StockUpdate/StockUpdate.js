@@ -41,7 +41,7 @@ const StockUpdate = () => {
                 <Form onSubmit={handleRestock}>
                   <InputGroup className="w-auto">
                     <FormControl
-                      placeholder="Enter Number"
+                      placeholder="Enter Quantity"
                       type="number"
                       name="number"
                       aria-label="Recipient's username"

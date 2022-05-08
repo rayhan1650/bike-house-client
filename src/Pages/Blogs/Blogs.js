@@ -7,7 +7,7 @@ const Blogs = () => {
       <div>
         <h2>Q1: What is the difference between javascript and nodejs?</h2>
         <h4>Answer:</h4>
-        <table className="table table-bordered border-dark fs-4">
+        <table className="table table-bordered border-dark fs-5">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -114,7 +114,7 @@ const Blogs = () => {
       <div className="mb-5">
         <h2>Q3: What is the difference between SQL and NoSQL databases?</h2>
         <h4>Answer:</h4>
-        <table className="table table-bordered border-dark fs-4">
+        <table className="table table-bordered border-dark fs-5">
           <thead>
             <tr>
               <th scope="col">#</th>

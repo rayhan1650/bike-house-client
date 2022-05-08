@@ -1,3 +1,10 @@
 .my-addItem {
-  min-height: 85vh;
+  width: 50%;
+  min-height: 80vh;
+}
+
+@media only screen and (max-width: 576px) {
+  .my-addItem {
+    width: 100%;
+  }
 }

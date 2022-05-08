@@ -9,6 +9,8 @@ import {
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -85,7 +87,7 @@ const Login = () => {
             const email = emailRef.current.value;
             await sendPasswordResetEmail(email);
             if (email) {
-              // toast("Sent email");
+              toast("Sent password reset email.");
             }
           }}
           className="border-0 text-primary bg-transparent"

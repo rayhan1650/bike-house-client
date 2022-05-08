@@ -2,9 +2,13 @@ import React from "react";
 import useInventories from "../../hooks/useInventories";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Loading from "../Shared/Loading/Loading";
 
 const ManageInventories = () => {
   const [inventories, setInventories] = useInventories();
+  if (!inventories.length) {
+    return <Loading />;
+  }
   return (
     <div className="container">
       <h2 className="text-center text-primary mt-5">Manage Inventories</h2>

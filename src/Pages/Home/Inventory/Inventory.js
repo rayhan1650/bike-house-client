@@ -21,8 +21,8 @@ const Inventory = ({ inventory }) => {
           <h5 className="mt-3">Quantity: {quantity}</h5>
           <h5>Supplier: {supplier}</h5>
           <p className="card-text my-text-justify my-2">
-            {description.length > 250
-              ? `${description.slice(0, 249)} ....`
+            {description.length > 180
+              ? `${description.slice(0, 180)} ....`
               : description}
           </p>
 

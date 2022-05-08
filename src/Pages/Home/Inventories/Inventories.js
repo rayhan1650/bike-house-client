@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import useInventories from "../../../hooks/useInventories";
+import Loading from "../../Shared/Loading/Loading";
 import Inventory from "../Inventory/Inventory";
 
 const Inventories = () => {
   const [inventories, setInventories] = useInventories();
+  if (!inventories.length) {
+    return <Loading />;
+  }
   return (
     <div className="container my-5">
       <h2 className="text-center mb-4 text-primary display-4 fw-bold">
@@ -19,6 +24,11 @@ const Inventories = () => {
           : inventories.map((inventory) => (
               <Inventory key={inventory._id} inventory={inventory} />
             ))}
+      </div>
+      <div className="text-center my-3">
+        <Link className="btn btn-success" to="/manageinventories">
+          Manage Inventories
+        </Link>
       </div>
     </div>
   );

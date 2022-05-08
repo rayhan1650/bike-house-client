@@ -16,7 +16,7 @@ const StockUpdate = () => {
   const handleRestock = (event) => {
     event.preventDefault();
     const num = event.target.number.value;
-    event.reset();
+    event.target.reset();
     console.log(num);
   };
   return (

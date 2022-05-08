@@ -13,7 +13,7 @@ const MyItems = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMyItems(data));
-  }, []);
+  }, [myItems]);
   return (
     <div className="container myItems my-5">
       <h2 className="text-center mb-4 text-primary fw-bold">My Items</h2>

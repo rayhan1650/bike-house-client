@@ -2,6 +2,23 @@ import React from "react";
 
 const MyItem = ({ myItem }) => {
   const { img, price, name, description, _id, quantity, supplier } = myItem;
+
+  const handleItemDelete = (id) => {
+    const proceed = window.confirm("Are you sure you want to delete?");
+    if (proceed) {
+      console.log("delete", id);
+      const url = `http://localhost:5000/inventory/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            console.log("Delete successful.");
+          }
+        });
+    }
+  };
   return (
     <div className="col ">
       <div className="card rounded-3 shadow h-100">
@@ -19,7 +36,12 @@ const MyItem = ({ myItem }) => {
               : description}
           </p>
 
-          <button className="btn btn-primary mt-auto">Delete Item</button>
+          <button
+            onClick={() => handleItemDelete(_id)}
+            className="btn btn-primary mt-auto"
+          >
+            Delete Item
+          </button>
         </div>
       </div>
     </div>

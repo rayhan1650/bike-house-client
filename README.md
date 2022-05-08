@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<style>
+@media only screen and (max-width: 576px) {
+  .my-margin {
+    margin-bottom: 0;
+  }
+}
+</style>
+
 ## Available Scripts
 
 In the project directory, you can run:

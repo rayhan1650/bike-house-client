@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
+import axios from "axios";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import {
@@ -29,14 +30,17 @@ const Login = () => {
   }
 
   if (user) {
-    navigate(from, { replace: true });
+    // navigate(from, { replace: true });
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+    const { data } = await axios.post("http://localhost:5000/login", { email });
+    localStorage.setItem("accessToken", data.accessToken);
+    navigate(from, { replace: true });
   };
   return (
     <div className="my-login mx-auto">

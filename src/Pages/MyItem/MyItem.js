@@ -22,7 +22,7 @@ const MyItem = ({ myItem }) => {
   return (
     <div className="col ">
       <div className="card rounded-3 shadow h-100">
-        <img src={img} className="card-img-top" alt="..." />
+        <img src={img} className="card-img-top" alt="My Item's img" />
         <div className="card-body d-flex flex-column">
           <h4 className="card-title">{name}</h4>
           <span className="badge bg-success fs-4 text-start">

@@ -12,7 +12,7 @@ const Inventory = ({ inventory }) => {
   return (
     <div className="col ">
       <div className="card rounded-3 shadow h-100">
-        <img src={img} className="card-img-top" alt="..." />
+        <img src={img} className="card-img-top" alt="Inventory item's img" />
         <div className="card-body d-flex flex-column">
           <h4 className="card-title">{name}</h4>
           <span className="badge bg-success fs-4 text-start">
@@ -27,10 +27,11 @@ const Inventory = ({ inventory }) => {
           </p>
 
           <button
+            title="Stock Update"
             onClick={() => stockUpdate(_id)}
             className="btn btn-primary mt-auto"
           >
-            Stock Update
+            Update
           </button>
         </div>
       </div>

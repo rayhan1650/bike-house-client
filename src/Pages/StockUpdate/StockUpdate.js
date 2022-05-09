@@ -63,9 +63,10 @@ const StockUpdate = () => {
               <h4 className="card-title">{item.name}</h4>
               <span className="badge bg-success">Price: ${item.price}</span>
               <h5 className="mt-3">Supplier: {item.supplier}</h5>
+              <h5 className="mt-3">Item Id: {item._id}</h5>
               <h5>Quantity: {item.quantity}</h5>
               <p className="card-text my-text-justify">
-                <strong>Description:</strong>
+                <strong>Description: </strong>
                 {item.description}
               </p>
 

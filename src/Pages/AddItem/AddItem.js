@@ -29,7 +29,7 @@ const AddItem = () => {
   };
   return (
     <div className=" container ">
-      <h2 className="text-center mt-3 text-primary">AddItem</h2>
+      <h2 className="text-center mt-3 text-primary">Add New Item</h2>
       <form
         className="d-flex flex-column my-addItem mx-auto"
         onSubmit={handleSubmit(onSubmit)}

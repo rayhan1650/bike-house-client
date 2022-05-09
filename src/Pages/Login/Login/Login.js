@@ -30,7 +30,7 @@ const Login = () => {
   }
 
   if (user) {
-    // navigate(from, { replace: true });
+    navigate(from, { replace: true });
   }
 
   const handleSubmit = async (event) => {
@@ -43,7 +43,6 @@ const Login = () => {
       { email }
     );
     localStorage.setItem("accessToken", data.accessToken);
-    navigate(from, { replace: true });
   };
   return (
     <div className="my-login mx-auto">

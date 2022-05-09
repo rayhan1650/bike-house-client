@@ -21,7 +21,7 @@ const SignUp = () => {
     return <Loading />;
   }
   if (user) {
-    // navigate("/");
+    navigate("/");
   }
 
   const handleSignUp = async (event) => {
@@ -39,10 +39,11 @@ const SignUp = () => {
       await createUserWithEmailAndPassword(email, password);
       const { data } = await axios.post(
         "https://secure-reef-15878.herokuapp.com/login",
-        { email }
+        {
+          email,
+        }
       );
       localStorage.setItem("accessToken", data.accessToken);
-      navigate("/");
     }
   };
   return (

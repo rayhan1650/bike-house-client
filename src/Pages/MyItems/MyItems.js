@@ -14,8 +14,7 @@ const MyItems = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const getItems = async () => {
-      // const url = `https://secure-reef-15878.herokuapp.com/inventories?email=${email}`;
-      const url = `http://localhost:5000/inventories?email=${email}`;
+      const url = `https://secure-reef-15878.herokuapp.com/myitems?email=${email}`;
       try {
         const { data } = await axios.get(url, {
           headers: {
@@ -36,11 +35,19 @@ const MyItems = () => {
   return (
     <div className="container myItems my-5">
       <h2 className="text-center mb-4 text-primary fw-bold">My Items</h2>
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        {myItems.length
-          ? myItems.map((myItem) => <MyItem key={myItem._id} myItem={myItem} />)
-          : "You have no items."}
-      </div>
+
+      {myItems.length ? (
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          {myItems.map((myItem) => (
+            <MyItem key={myItem._id} myItem={myItem} />
+          ))}
+        </div>
+      ) : (
+        <div className="text-center">
+          <h4>You have no items!!</h4>
+          <h4>Please add new item.</h4>
+        </div>
+      )}
     </div>
   );
 };

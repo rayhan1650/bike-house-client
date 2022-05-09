@@ -3,16 +3,23 @@ import "./MyItems.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import MyItem from "../MyItem/MyItem";
+import axios from "axios";
 
 const MyItems = () => {
   const [user] = useAuthState(auth);
   const email = user.email;
   const [myItems, setMyItems] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:5000/inventories?email=${email}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setMyItems(data));
+    const getItems = async () => {
+      const url = `https://secure-reef-15878.herokuapp.com/inventories?email=${email}`;
+      const { data } = await axios.get(url, {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      });
+      setMyItems(data);
+    };
+    getItems();
   }, [myItems]);
   return (
     <div className="container myItems my-5">

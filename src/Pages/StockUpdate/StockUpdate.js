@@ -6,7 +6,7 @@ import "./StockUpdate.css";
 const StockUpdate = () => {
   const { id } = useParams();
   const [item, setItem] = useState({});
-  const url = `http://localhost:5000/inventory/${id}`;
+  const url = `https://secure-reef-15878.herokuapp.com/inventory/${id}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())

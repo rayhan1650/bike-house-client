@@ -1,0 +1,8 @@
+.race-photo {
+  background-size: cover;
+  height: 400px;
+  background-image: url("https://i.ibb.co/gdZGK8z/bike-race.jpg");
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+}

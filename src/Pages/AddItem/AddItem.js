@@ -13,7 +13,7 @@ const AddItem = () => {
     reset,
   } = useForm();
   const onSubmit = (data) => {
-    const url = `http://localhost:5000/inventories`;
+    const url = `https://secure-reef-15878.herokuapp.com/inventories`;
     fetch(url, {
       method: "POST",
       headers: {

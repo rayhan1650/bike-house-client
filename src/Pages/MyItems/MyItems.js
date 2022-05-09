@@ -4,21 +4,32 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import MyItem from "../MyItem/MyItem";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
 
 const MyItems = () => {
   const [user] = useAuthState(auth);
   const email = user.email;
   const [myItems, setMyItems] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
     const getItems = async () => {
       // const url = `https://secure-reef-15878.herokuapp.com/inventories?email=${email}`;
       const url = `http://localhost:5000/inventories?email=${email}`;
-      const { data } = await axios.get(url, {
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      });
-      setMyItems(data);
+      try {
+        const { data } = await axios.get(url, {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+        });
+        setMyItems(data);
+      } catch (error) {
+        console.log(error.message);
+        if (error.response.status === 401 || error.response.status === 403) {
+          signOut(auth);
+          navigate("/login");
+        }
+      }
     };
     getItems();
   }, [myItems]);

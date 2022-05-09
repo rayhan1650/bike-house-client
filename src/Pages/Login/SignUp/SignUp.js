@@ -5,6 +5,7 @@ import auth from "../../../firebase.init";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import Loading from "../../Shared/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import axios from "axios";
 
 const SignUp = () => {
   const emailRef = useRef("");
@@ -20,10 +21,10 @@ const SignUp = () => {
     return <Loading />;
   }
   if (user) {
-    navigate("/");
+    // navigate("/");
   }
 
-  const handleSignUp = (event) => {
+  const handleSignUp = async (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
@@ -35,7 +36,13 @@ const SignUp = () => {
       return;
     } else {
       setPasswordError("");
-      createUserWithEmailAndPassword(email, password);
+      await createUserWithEmailAndPassword(email, password);
+      const { data } = await axios.post(
+        "https://secure-reef-15878.herokuapp.com/login",
+        { email }
+      );
+      localStorage.setItem("accessToken", data.accessToken);
+      navigate("/");
     }
   };
   return (

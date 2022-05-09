@@ -11,7 +11,8 @@ const MyItems = () => {
   const [myItems, setMyItems] = useState([]);
   useEffect(() => {
     const getItems = async () => {
-      const url = `https://secure-reef-15878.herokuapp.com/inventories?email=${email}`;
+      // const url = `https://secure-reef-15878.herokuapp.com/inventories?email=${email}`;
+      const url = `http://localhost:5000/inventories?email=${email}`;
       const { data } = await axios.get(url, {
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

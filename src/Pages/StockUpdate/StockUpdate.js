@@ -52,7 +52,7 @@ const StockUpdate = () => {
     }
   };
   return (
-    <div className="container my-stockupdate">
+    <div className="container mb-3 my-stockupdate">
       <div className="card my-3 shadow">
         <div className="row g-0 ">
           <div className="col-md-4 p-2 d-flex justify-content-center align-items-center">
